@@ -1,8 +1,9 @@
-<a href="README.md" >Go Back</a>
-
-### pb_device.mk sample
-
-```bash
+#
+# Copyright (C) 2023 The Android Open Source Project
+# Copyright (C) 2023 SebaUbuntu's TWRP device tree generator
+#
+# SPDX-License-Identifier: Apache-2.0
+#
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
@@ -12,17 +13,23 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/base.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 
 # Enable project quotas and casefolding for emulated storage without sdcardfs
-$(call inherit-product, device/<path>/device.mk) -- path to main device makefile
+$(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 
-# Inherit common product files.
+# Inherit some common twrp stuff.
 $(call inherit-product, vendor/pb/config/common.mk)
 
-# Set those variables here to overwrite the inherited values.
+# Inherit from X6833B device
+$(call inherit-product, device/infinix/X6833B/device.mk)
 
-PRODUCT_BRAND := infinic
 PRODUCT_DEVICE := X6833B
-PRODUCT_NAME := pb_device
+PRODUCT_NAME := pb_X6833B
+PRODUCT_BRAND := Infinix
+PRODUCT_MODEL := Infinix X6833B
 PRODUCT_MANUFACTURER := infinix
-PRODUCT_MODEL := infinix X6833B
-TARGET_VENDOR := vendorboot
-```
+
+PRODUCT_GMS_CLIENTID_BASE := android-infinix
+
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    PRIVATE_BUILD_DESC="vext_x6833b_h894-user 12 SP1A.210812.016 469345 release-keys"
+
+BUILD_FINGERPRINT := Infinix/X6833B-GL/Infinix-X6833B:12/SP1A.210812.016/231102V2258:user/release-keys
