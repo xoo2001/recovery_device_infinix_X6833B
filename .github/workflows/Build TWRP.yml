@@ -56,7 +56,7 @@ jobs:
       
     - name: Clone device tree
       run: |
-        git clone https://github.com/Kazuki-Kazuto/android_device_infinix_Infinix-X6833B.git -b vext_x6833b_h894-user-12-SP1A.210812.016-469345-release-keys
+        git clone https://github.com/Shivelight/recovery_device_infinix_X6833B.git -b ${{ env.BRANCH_NAME }} ./device/infinix/X6833B
       working-directory: ${{ steps.pwd.outputs.workspace-folder }}
 
     - name: Sync Device Dependencies
