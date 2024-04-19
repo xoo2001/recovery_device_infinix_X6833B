@@ -22,7 +22,7 @@ $(call inherit-product, vendor/pb/config/common.mk)
 $(call inherit-product, device/infinix/X6833B/device.mk)
 
 PRODUCT_DEVICE := X6833B
-PRODUCT_NAME := twrp_X6833B
+PRODUCT_NAME := pb_X6833B
 PRODUCT_BRAND := Infinix
 PRODUCT_MODEL := Infinix X6833B
 PRODUCT_MANUFACTURER := infinix
