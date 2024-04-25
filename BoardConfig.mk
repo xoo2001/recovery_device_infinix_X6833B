@@ -125,24 +125,6 @@ PLATFORM_SECURITY_PATCH := 2099-12-31
 VENDOR_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
 BOOT_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
 
-# TWRP Configuration
-TW_CUSTOM_CLOCK_POS := 40
-TW_CUSTOM_CPU_POS := 290
-TW_CUSTOM_CPU_TEMP_PATH := /sys/class/thermal/thermal_zone28/temp
-TW_DEFAULT_BRIGHTNESS := 2047
-TW_DEVICE_VERSION := By Kaze
-TW_EXCLUDE_APEX := true
-TW_EXTRA_LANGUAGES := true
-TW_HAS_NO_RECOVERY_PARTITION := true
-TW_INCLUDE_FASTBOOTD := true
-TW_INPUT_BLACKLIST := "hbtp_vm"
-TW_NO_FLASH_CURRENT_TWRP := true
-TW_SCREEN_BLANK_ON_BOOT := true
-TW_THEME := portrait_hdpi
-TW_USE_TOOLBOX := true
-TARGET_USE_CUSTOM_LUN_FILE_PATH := /config/usb_gadget/g1/functions/mass_storage.usb0/lun.%d/file
-TARGET_USES_MKE2FS := true
-TW_FRAMERATE := 60
 
 # Tools
 TW_INCLUDE_FUSE_EXFAT := true
@@ -156,14 +138,14 @@ TW_INCLUDE_LPTOOLS := true
 TWRP_INCLUDE_LOGCAT := true
 TARGET_USES_LOGD := true
 
-# SHRP 
+# SHRP Configuration
 ################### ############################################
 # MANDATORY FLAGS # These flags HAVE TO be set/changed by you! #
 ################### ############################################
 
 # Device codename
 # Default (if not set): N/A
-SHRP_DEVICE_CODE := x6833B
+SHRP_DEVICE_CODE := X6833B
 
 # Path of your SHRP device tree
 # Replace <device-brand> with the device brand name
@@ -182,3 +164,7 @@ SHRP_DEVICE_TYPE := A/B
 # Use this flag only if your device is A/B or Virtual A/B.
 # Default (if not set): N/A
 SHRP_AB := true
+
+SHRP Dark mode, use this flag to have dark theme set by default
+# Default (if not set) is not using DARK mode
+SHRP_DARK := true
