@@ -125,19 +125,6 @@ PLATFORM_SECURITY_PATCH := 2099-12-31
 VENDOR_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
 BOOT_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
 
-
-# Tools
-TW_INCLUDE_FUSE_EXFAT := true
-TW_INCLUDE_LIBRESETPROP := true
-TW_INCLUDE_NTFS_3G := true
-TW_INCLUDE_REPACKTOOLS := true
-TW_INCLUDE_RESETPROP := true
-TW_INCLUDE_LPTOOLS := true
-
-# Debug
-TWRP_INCLUDE_LOGCAT := true
-TARGET_USES_LOGD := true
-
 # SHRP Configuration
 ################### ############################################
 # MANDATORY FLAGS # These flags HAVE TO be set/changed by you! #
