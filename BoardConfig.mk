@@ -155,3 +155,30 @@ TW_INCLUDE_LPTOOLS := true
 # Debug
 TWRP_INCLUDE_LOGCAT := true
 TARGET_USES_LOGD := true
+
+# SHRP 
+################### ############################################
+# MANDATORY FLAGS # These flags HAVE TO be set/changed by you! #
+################### ############################################
+
+# Device codename
+# Default (if not set): N/A
+SHRP_DEVICE_CODE := x6833B
+
+# Path of your SHRP device tree
+# Replace <device-brand> with the device brand name
+# (SHRP_DEVICE_CODE will expand to the above variable so check if that is correct)
+SHRP_PATH := device/infinix/X6833B
+
+# Maintainer name
+# Default (if not set): N/A
+SHRP_MAINTAINER := Kaze
+
+
+# Device Type (for "About" section only)
+# Default (if not set): N/A
+SHRP_DEVICE_TYPE := A/B
+
+# Use this flag only if your device is A/B or Virtual A/B.
+# Default (if not set): N/A
+SHRP_AB := true
